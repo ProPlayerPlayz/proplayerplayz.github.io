@@ -324,11 +324,11 @@ No. of Clusters = 4
 
 No. of Clusters = 3
 
-![plot of chunk hcluster3 ](/assets/market-segmentationimages/hcluster3-1.png)
+![plot of chunk hcluster3 ](/assets/market-segmentation/hcluster3-1.png)
 
 No. of Clusters = 2
 
-![plot of chunk hcluster2 ](/assets/market-segmentationimages/hcluster2-1.png)
+![plot of chunk hcluster2 ](/assets/market-segmentation/hcluster2-1.png)
 
 ### 3.2. K-means Clustering
 
@@ -353,7 +353,7 @@ No. of Clusters = 2
 ## [1] 131352595  61338314 586111857
 ```
 
-![plot of chunk kmeans](images/kmeans-1.png)
+![plot of chunk kmeans](/assets/market-segmentation/kmeans-1.png)
 
 ## 4. Conclusion
 
