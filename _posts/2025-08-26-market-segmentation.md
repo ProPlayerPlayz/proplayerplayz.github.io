@@ -277,13 +277,13 @@ p07 <- crs %>%
 gridExtra::grid.arrange(p01, p02, p03, p04, p05, p06, p07)
 ```
 
-![plot of chunk distributions](images/distributions-1.png)
+![plot of chunk distributions](/assets/market-segmentation/distributions-1.png)
 
 ### 2.2. Dendrogram
 
 
 
-![plot of chunk dendrogram](images/dendrogram-1.png)
+![plot of chunk dendrogram](/assets/market-segmentation/dendrogram-1.png)
 
 Observing the above dendrogram we can observe that
 
@@ -304,7 +304,7 @@ fviz_nbclust(crs$dataset[, c(1:7)], kmeans, method = "wss") +
   labs(subtitle = "Elbow Method")
 ```
 
-![plot of chunk elbow](images/elbow-1.png)
+![plot of chunk elbow](/assets/market-segmentation/elbow-1.png)
 
 We can observe that when the no. of clusters is 2 there is a sharp change in the total within sum of squares. This shows that 2 is the optimal no. of clusters to have for this dataset
 
@@ -316,19 +316,19 @@ Clustering is a method of grouping the observation based on their similarities. 
 
 No. of Clusters = 5
 
-![plot of chunk hcluster5](images/hcluster5-1.png)
+![plot of chunk hcluster5](/assets/market-segmentation/hcluster5-1.png)
 
 No. of Clusters = 4
 
-![plot of chunk hcluster4 ](images/hcluster4 -1.png)
+![plot of chunk hcluster4 ](/assets/market-segmentation/hcluster4-1.png)
 
 No. of Clusters = 3
 
-![plot of chunk hcluster3 ](images/hcluster3 -1.png)
+![plot of chunk hcluster3 ](/assets/market-segmentationimages/hcluster3-1.png)
 
 No. of Clusters = 2
 
-![plot of chunk hcluster2 ](images/hcluster2 -1.png)
+![plot of chunk hcluster2 ](/assets/market-segmentationimages/hcluster2-1.png)
 
 ### 3.2. K-means Clustering
 
