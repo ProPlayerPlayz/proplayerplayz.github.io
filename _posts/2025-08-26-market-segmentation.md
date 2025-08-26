@@ -277,13 +277,13 @@ p07 <- crs %>%
 gridExtra::grid.arrange(p01, p02, p03, p04, p05, p06, p07)
 ```
 
-![distributions](_posts/figure/unnamed-chunk-9-1.png)
+![plot of chunk distributions](images/distributions-1.png)
 
 ### 2.2. Dendrogram
 
 
 
-![dendrogram](_posts/figure/unnamed-chunk-11-1.png)
+![plot of chunk dendrogram](images/dendrogram-1.png)
 
 Observing the above dendrogram we can observe that
 
@@ -293,11 +293,18 @@ Observing the above dendrogram we can observe that
 ``` r
 # Elbow method for finding the no of clusters
 library(factoextra)
+```
+
+```
+## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
+```
+
+``` r
 fviz_nbclust(crs$dataset[, c(1:7)], kmeans, method = "wss") +
   labs(subtitle = "Elbow Method")
 ```
 
-![elbowmethod](_posts/figure/unnamed-chunk-12-1.png)
+![plot of chunk elbow](images/elbow-1.png)
 
 We can observe that when the no. of clusters is 2 there is a sharp change in the total within sum of squares. This shows that 2 is the optimal no. of clusters to have for this dataset
 
@@ -309,44 +316,30 @@ Clustering is a method of grouping the observation based on their similarities. 
 
 No. of Clusters = 5
 
-![plot of chunk unnamed-chunk-13](_posts/figure/unnamed-chunk-13-1.png)
+![plot of chunk hcluster5](images/hcluster5-1.png)
 
 No. of Clusters = 4
 
-![plot of chunk unnamed-chunk-14](_posts/figure/unnamed-chunk-14-1.png)
+![plot of chunk hcluster4 ](images/hcluster4 -1.png)
 
 No. of Clusters = 3
 
-![plot of chunk unnamed-chunk-15](_posts/figure/unnamed-chunk-15-1.png)
+![plot of chunk hcluster3 ](images/hcluster3 -1.png)
 
 No. of Clusters = 2
 
-![plot of chunk unnamed-chunk-16](_posts/figure/unnamed-chunk-16-1.png)
+![plot of chunk hcluster2 ](images/hcluster2 -1.png)
 
 ### 3.2. K-means Clustering
 
-
-``` r
-crs$kmeans <- kmeans(na.omit(crs$dataset[, crs$numeric]), 3)
-
-paste(crs$kmeans$size, collapse=' ')
-```
 
 ```
 ## [1] "12 10 8"
 ```
 
-``` r
-colMeans(na.omit(crs$dataset[, crs$numeric]))
-```
-
 ```
 ##          Age       Female       Income      Married     Children         Loan     Mortgage 
 ## 4.596667e+01 5.666667e-01 2.801187e+04 8.000000e-01 9.333333e-01 4.333333e-01 4.000000e-01
-```
-
-``` r
-crs$kmeans$centers
 ```
 
 ```
@@ -356,19 +349,11 @@ crs$kmeans$centers
 ## 3 57.875 0.6250000 47728.97 1.0000000    0.625 0.25 0.3750000
 ```
 
-``` r
-crs$kmeans$withinss
-```
-
 ```
 ## [1] 131352595  61338314 586111857
 ```
 
-``` r
-cluster::clusplot(na.omit(crs$dataset[, intersect(crs$input, crs$numeric)]), crs$kmeans$cluster, color=TRUE, shade=TRUE, main='K-Means Clustering with 3 Clusters')
-```
-
-![finalclusters](_posts/figure/unnamed-chunk-17-1.png)
+![plot of chunk kmeans](images/kmeans-1.png)
 
 ## 4. Conclusion
 
