@@ -277,13 +277,13 @@ p07 <- crs %>%
 gridExtra::grid.arrange(p01, p02, p03, p04, p05, p06, p07)
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-9](_posts/figure/unnamed-chunk-11-1.png)
 
 ### 2.2. Dendrogram
 
 
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-11](_posts/figure/unnamed-chunk-11-1.png)
 
 Observing the above dendrogram we can observe that
 
@@ -297,7 +297,7 @@ fviz_nbclust(crs$dataset[, c(1:7)], kmeans, method = "wss") +
   labs(subtitle = "Elbow Method")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](_posts/figure/unnamed-chunk-12-1.png)
 
 We can observe that when the no. of clusters is 2 there is a sharp change in the total within sum of squares. This shows that 2 is the optimal no. of clusters to have for this dataset
 
@@ -309,19 +309,19 @@ Clustering is a method of grouping the observation based on their similarities. 
 
 No. of Clusters = 5
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-13](_posts/figure/unnamed-chunk-13-1.png)
 
 No. of Clusters = 4
 
-![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
+![plot of chunk unnamed-chunk-14](_posts/figure/unnamed-chunk-14-1.png)
 
 No. of Clusters = 3
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
+![plot of chunk unnamed-chunk-15](_posts/figure/unnamed-chunk-15-1.png)
 
 No. of Clusters = 2
 
-![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png)
+![plot of chunk unnamed-chunk-16](_posts/figure/unnamed-chunk-16-1.png)
 
 ### 3.2. K-means Clustering
 
@@ -368,7 +368,7 @@ crs$kmeans$withinss
 cluster::clusplot(na.omit(crs$dataset[, intersect(crs$input, crs$numeric)]), crs$kmeans$cluster, color=TRUE, shade=TRUE, main='K-Means Clustering with 3 Clusters')
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png)
+![plot of chunk unnamed-chunk-17](_posts/figure/unnamed-chunk-17-1.png)
 
 ## 4. Conclusion
 
